@@ -1,0 +1,11 @@
+.horizontal {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.section{
+    flex: 0 0 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+}
