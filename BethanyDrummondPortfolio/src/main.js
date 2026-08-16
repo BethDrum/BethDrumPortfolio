@@ -9,8 +9,5 @@ gsap.to(contents, {
     trigger: "#horizontal",
     pin: true,
     scrub: 1,
-    snap:{
-      snapTo: "contents"
-    }
   }
 })

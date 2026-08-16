@@ -3,29 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;1,7..72,300&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Bethany Drummond Portfolio</title>
   </head>
   <body>
     <section id="horizontal">
       <!-- all sections auto set to horizontal scroll -->
-      <div class="section">
-        <image src="./src/assets/stAbbs1.jpeg" alt="imageOfField" id="img1"></image>
+      <div class="section" id="intro">
+        <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></image>
+        
         <div id="boxOverlay">
+          <div id="wordOverlay">
+            <h1>Bethany Drummond</h1>
+          </div>
+          <div id="lightBoxOverlay">
+            <h3>3rd Year Computer Science 
+            <br>(User Design and Interaction)</h3>
+          </div>
+
+          <!--LINKS NEED FIXING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+          <div class="row align-items-center" id="linkWrap">
+            <div class="col-auto" id="v-line">
+            </div>
+            <div class="col" id="smallWordOverlay">
+              <a href="#aboutSec">About</a>
+              <br>
+              <a href="#portfolioSec">Portfolio</a>
+              <br>
+              <a href="#contactSec">Contact Me</a>
+            </div>
+          </div>
         </div>
-        <div id="wordOverlay">
-          <h1>Section 1</h1>
-        </div>
+
       </div>
 
-      <div class="section">
-        <h1> section 2</h1>
+      <div class="section" id="aboutSec">
+        <h1> section 2 </h1>
       </div>
 
-      <div class="section">
+      <div class="section" id="portfolioSec">
         <h1> section 3</h1>
       </div>
 
-      <div class="section">
+      <div class="section" id="contactSec">
         <h1> section 4</h1>
       </div>
     </seciton>
@@ -33,7 +58,8 @@
     <!-- GSAP plugin for scroll -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
-
+    <!--Bootstap plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script type="module" src="./src/main.js"></script>
 </body>
 </html>
