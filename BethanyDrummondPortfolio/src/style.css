@@ -1,11 +1,43 @@
-.horizontal {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+*{
+  box-sizing: border-box;
 }
 
-.section{
-    flex: 0 0 100vw;
+body{
+  margin: 0;
+  padding: 0
+}
+
+#horizontal .section{
+    width: 100vw;
     height: 100vh;
-    scroll-snap-align: start;
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+}
+
+#horizontal {
+    display: flex;
+    overflow-x: hidden;
+    /*scroll-snap-type: x mandatory; */
+}
+
+#img1{
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+#sec1{
+  position: relative;
+}
+
+#boxOverlay{
+  position: absolute;
+  background-color: #526747;
+}
+
+#wordOverlay{
+  position: absolute;
+  inset: 0;
+  color:#FFF8F2;
 }
