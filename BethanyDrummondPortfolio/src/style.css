@@ -1,43 +1,103 @@
+/* General Styling */
 *{
   box-sizing: border-box;
 }
 
 body{
   margin: 0;
-  padding: 0
+  padding: 0;
+  font-family: 'Literata', serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #526747;
 }
 
+h1{
+  font-size: 300%;
+}
+
+img{
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* Horizontal Scroll */
 #horizontal .section{
     width: 100vw;
     height: 100vh;
     display: grid;
     flex-shrink: 0;
     place-items: center;
+    position: relative;
 }
 
 #horizontal {
     display: flex;
     overflow-x: hidden;
-    /*scroll-snap-type: x mandatory; */
 }
 
-#img1{
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-}
-
-#sec1{
-  position: relative;
-}
-
+/* General Component Styling */
 #boxOverlay{
   position: absolute;
+  inset:0;
   background-color: #526747;
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+}
+
+#lightBoxOverlay{
+  inset:0;
+  background-color: #FFF8F2;
+  color: #9C826D;
+  padding: 5%;
+  overflow: hidden;
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 #wordOverlay{
-  position: absolute;
   inset: 0;
   color:#FFF8F2;
+  width: 30vw;
+  margin-top: 10vh;
+}
+
+#smallWordOverlay a{
+  color: #FFF2DE;
+  text-decoration: none;
+  font-size: 80%; 
+  display: inline-block;
+}
+
+#smallWordOverlay a:hover, a:visited, a:active{
+  color: #FFF2DE;
+  text-decoration: none;
+}
+
+#v-line{
+  border-right: 2px solid #FFF2DE;
+  height:100%;
+  margin-left: -10%;
+  width: 1px;
+}
+
+#linkWrap{
+  width:20vw;
+}
+
+/* Unique section component styling */
+/* Intro */
+#intro #lightBoxOverlay{
+  margin-bottom: 30vh;
+  width: 40vw;
+}
+
+#intro #lightBoxOverlay h3{
+  font-size: 100%;
+  line-height: 1.5rem;
 }

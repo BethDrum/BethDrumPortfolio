@@ -1,0 +1,25 @@
+{
+  "name": "bethanydrummondportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BethDrum/BethDrumPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BethDrum/BethDrumPortfolio/issues"
+  },
+  "homepage": "https://github.com/BethDrum/BethDrumPortfolio#readme",
+  "dependencies": {
+    "vite": "^8.2.1"
+  }
+}
