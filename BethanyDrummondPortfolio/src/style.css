@@ -16,6 +16,15 @@ h1{
   font-size: 300%;
 }
 
+h2{
+  font-size: 150%;
+}
+
+h3{
+  font-size: 100%;
+  line-height: 1.5rem;
+}
+
 img{
   height: 100vh;
   width: 100vw;
@@ -37,6 +46,24 @@ img{
     overflow-x: hidden;
 }
 
+/*Vertical Scroll*/
+#vertical .sectionV{
+  width: 70vw;
+  height: 70vh;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  position: relative;
+  z-index: 10;
+  background-color: #9C826D;
+}
+
+#vertical {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 /* General Component Styling */
 #boxOverlay{
   position: absolute;
@@ -49,7 +76,7 @@ img{
   padding-left: 5vw;
 }
 
-#lightBoxOverlay{
+.lightBoxOverlay{
   inset:0;
   background-color: #FFF8F2;
   color: #9C826D;
@@ -92,12 +119,25 @@ img{
 
 /* Unique section component styling */
 /* Intro */
-#intro #lightBoxOverlay{
+#intro .lightBoxOverlay{
   margin-bottom: 30vh;
   width: 40vw;
 }
 
-#intro #lightBoxOverlay h3{
-  font-size: 100%;
-  line-height: 1.5rem;
+/* About */
+#aboutSec .lightBoxOverlay{
+  margin-left: -5vw;
+  justify-self: start;
+}
+
+#aboutSec #title{
+  width: 35vw;
+  height: auto;
+  padding: 2%;
+  margin-top: 10vh;
+}
+
+#aboutSec #content{
+  height: 50vh;
+  width: 70vw;
 }
