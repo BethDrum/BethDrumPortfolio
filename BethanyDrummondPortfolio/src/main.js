@@ -2,11 +2,16 @@ import './style.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
+//define variables
 const contents = gsap.utils.toArray('#horizontal .section')
-const horizontalSec = gsap.to(contents, {
-  xPercent: -100 * (contents.length -1),
-  ease: "none",
-  scrollTrigger: {
+const verticalPanels = gsap.utils.toArray('#vertical .sectionV');
+
+//set to level according to start position - (70 * panel number)
+gsap.set(verticalPanels, {yPercent: 210});
+
+//scroll horizontal
+const timeline = gsap.timeline({
+  scrollTrigger:{
     trigger: "#scrollWrap",
     pin: true,
     scrub: 1,
@@ -14,27 +19,17 @@ const horizontalSec = gsap.to(contents, {
     end: "+=" + window.innerWidth * contents.length
   }
 });
-
-const vertical = gsap.utils.toArray('#vertical .sectionV')
-gsap.to(vertical, {
-  yPercent: -100 * (vetical.length -1),
-  ease: "none",
-  scrollTrigger:{
-    trigger:"#verticalSec",
-    containerAnimation: horizontalSec,
-    start: "left right",
-    end: "+=" + window.innerHeight * vertical.length,
-    pin: true,
-    scrub: 1,
-  }
+//continuation of horizontal scroll
+timeline.to(contents, {
+  xPercent: -100 * (contents.length -1),
+  ease: "none"
 });
 
-// const horizontalEnd = gsap.utils.toArray('#horizontalEnd .section')
-// gsap.to(horizontalEnd, {
-//   xPercent: -100 * (horizontalEnd.length -1),
-//   scrollTrigger: {
-//     trigger: "#horizontalEnd",
-//     pin: true,
-//     scrub: 1,
-//   }
-// })
+//labels end of horizontal scroll (for now)
+timeline.addLabel("verticalStart")
+
+//animate vertical
+timeline.to(verticalPanels, {
+  yPercent: -100 * (verticalPanels.length -1),
+  ease: "none"
+}, "verticalStart");
