@@ -12,54 +12,62 @@
     <title>Bethany Drummond Portfolio</title>
   </head>
   <body>
-    <section id="horizontal">
-      <!-- all sections auto set to horizontal scroll -->
-      <div class="section" id="intro">
-        <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></image>
-        
-        <div id="boxOverlay">
-          <div id="wordOverlay">
-            <h1>Bethany Drummond</h1>
-          </div>
-          <div class="lightBoxOverlay">
-            <h3>3rd Year Computer Science 
-            <br>(User Design and Interaction)</h3>
-          </div>
-
-          <!--LINKS NEED FIXING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-          <div class="row align-items-center" id="linkWrap">
-            <div class="col-auto" id="v-line">
+      <section id="horizontal">
+        <!-- all sections auto set to horizontal scroll -->
+        <div class="section" id="intro">
+          <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></image>
+          
+          <div id="boxOverlay">
+            <div id="wordOverlay">
+              <h1>Bethany Drummond</h1>
             </div>
-            <div class="col" id="smallWordOverlay">
-              <a href="#aboutSec">About</a>
-              <br>
-              <a href="#portfolioSec">Portfolio</a>
-              <br>
-              <a href="#contactSec">Contact Me</a>
+            <div class="lightBoxOverlay">
+              <h3>3rd Year Computer Science 
+              <br>(User Design and Interaction)</h3>
+            </div>
+
+            <!--LINKS NEED FIXING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+            <div class="row align-items-center" id="linkWrap">
+              <div class="col-auto" id="v-line">
+              </div>
+              <div class="col" id="smallWordOverlay">
+                <a href="#aboutSec">About</a>
+                <br>
+                <a href="#portfolioSec">Portfolio</a>
+                <br>
+                <a href="#contactSec">Contact Me</a>
+              </div>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <div class="section" id="aboutSec">
-        <div class="lightBoxOverlay" id="title">
-          <h2>About Me</h2>
+        <div class="section" id="aboutSec">
+          <div class="lightBoxOverlay" id="title">
+            <h2>About Me</h2>
+          </div>
+          <div class="lightBoxOverlay" id="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
+            <button type="button">Link to CV</button>
+          </div>
         </div>
-        <div class="lightBoxOverlay" id="content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
-          <button type="button">Link to CV</button>
+        <div id="verticalTrigger">
+          <img src="./src/assets/stAbbs2.jpeg"></image>
         </div>
-      </div>
+      </section>
 
-      <div class="section" id="portfolioSec">
-        <h1> section 3</h1>
-      </div>
+      <section id="vertical">
+        <div class="section">
+          <h1> P 1</h1>
+        </div>
+      </section>
 
-      <div class="section" id="contactSec">
-        <h1> section 4</h1>
-      </div>
-    </seciton>
+      <section id="horizontalEnd">
+        <div class="section">
+        </div>
+        <div class="section" id="contactSec">
+          <h1> section 4</h1>
+        </div>
+      </seciton>
 
     <!-- GSAP plugin for scroll -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>

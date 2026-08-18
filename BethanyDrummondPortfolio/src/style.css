@@ -46,24 +46,6 @@ img{
     overflow-x: hidden;
 }
 
-/*Vertical Scroll*/
-#vertical .sectionV{
-  width: 70vw;
-  height: 70vh;
-  display: grid;
-  flex-shrink: 0;
-  place-items: center;
-  position: relative;
-  z-index: 10;
-  background-color: #9C826D;
-}
-
-#vertical {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
 /* General Component Styling */
 #boxOverlay{
   position: absolute;
@@ -141,3 +123,5 @@ img{
   height: 50vh;
   width: 70vw;
 }
+
+/*Portfolio*/ 
