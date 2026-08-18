@@ -46,6 +46,25 @@ img{
     overflow-x: hidden;
 }
 
+/*Vertical Scroll*/
+#vertical .sectionV{
+  width: 70vw;
+  height: 70vh;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+#vertical {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    top: 0;
+    background-color: transparent;
+}
+
 /* General Component Styling */
 #boxOverlay{
   position: absolute;
@@ -125,3 +144,13 @@ img{
 }
 
 /*Portfolio*/ 
+#portfolioSec{
+  inset:0;
+  background-color: #FFF8F2;
+  color: #9C826D;
+  padding: 5%;
+  margin: 10%;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+}
