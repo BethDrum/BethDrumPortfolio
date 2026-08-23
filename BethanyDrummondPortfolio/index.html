@@ -12,6 +12,7 @@
     <title>Bethany Drummond Portfolio</title>
   </head>
   <body>
+    <div id="scrollWrap">
       <section id="horizontal">
         <!-- all sections auto set to horizontal scroll -->
         <div class="section" id="intro">
@@ -33,7 +34,7 @@
               <div class="col" id="smallWordOverlay">
                 <a href="#aboutSec">About</a>
                 <br>
-                <a href="#portfolioSec">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
                 <br>
                 <a href="#contactSec">Contact Me</a>
               </div>
@@ -47,28 +48,71 @@
           </div>
           <div class="lightBoxOverlay" id="content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
-            <button type="button">Link to CV</button>
+            <a href="https://www.google.com" class="button"> View my CV!</a>
           </div>
         </div>
-        <div id="verticalTrigger">
-          <img src="./src/assets/stAbbs2.jpeg"></image>
-        </div>
       </section>
 
-      <section id="vertical">
-        <div class="section">
-          <h1> P 1</h1>
+      <div id="vertical">
+        <div class="sectionV"></div>
+        <div class="sectionV">
+          <div class="lightBoxOverlay" id="portfolioSec">
+            <h1> P 1</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit, saepe harum itaque, iste asperiores a neque illo, eius tempora possimus eaque accusantium ex architecto at veniam repudiandae ullam minima?</p>
+            <div class="row" id="innerPortfolio">
+              <div class="col">
+                <h4>Stack</h4>
+                <ul>
+                  <li>HTML</li>
+                </ul>
+              </div>
+              <div class="col">
+                <a href="www.google.com" class="button">Link to project</a>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="sectionV">
+          <div class="lightBoxOverlay" id="portfolioSec">
+            <h1> P 2</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit, saepe harum itaque, iste asperiores a neque illo, eius tempora possimus eaque accusantium ex architecto at veniam repudiandae ullam minima?</p>
+            <h4>Stack</h4>
+            <ul>
+              <li>HTML</li>
+            </ul>
+            <a href="">Link to project</a>
+          </div>
+        </div>
+        <div class="sectionV">
+          <div class="lightBoxOverlay" id="portfolioSec">
+            <h1> P 3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit, saepe harum itaque, iste asperiores a neque illo, eius tempora possimus eaque accusantium ex architecto at veniam repudiandae ullam minima?</p>
+            <h4>Stack</h4>
+            <ul>
+              <li>HTML</li>
+            </ul>
+            <a href="">Link to project</a>
+          </div>
+        </div>
+      </div>
+
+      <section id="horizontalF">
+        <div class="sectionF"></div>
+
+        <div class="sectionF" id="contactSec">
+          <div class="lightBoxOverlay" id="title">
+            <h2>Contact Me</h2>
+          </div>
+          <div class="lightBoxOverlay" id="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
+          </div>
+        </div>
+        <div class="sectionF" id="endImage">
+          <img src="./src/assets/stAbbs2.jpeg"></img>
+        </div>
+
       </section>
-
-      <section id="horizontalEnd">
-        <div class="section">
-        </div>
-        <div class="section" id="contactSec">
-          <h1> section 4</h1>
-        </div>
-      </seciton>
-
+    </div>
     <!-- GSAP plugin for scroll -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
