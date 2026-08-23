@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,74 +12,82 @@
     <title>Bethany Drummond Portfolio</title>
   </head>
   <body>
-    <div id="scrollWrap">
-      <section id="horizontal">
-        <!-- all sections auto set to horizontal scroll -->
-        <div class="section" id="intro">
-          <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></image>
-          
-          <div id="boxOverlay">
-            <div id="wordOverlay">
-              <h1>Bethany Drummond</h1>
-            </div>
-            <div class="lightBoxOverlay">
-              <h3>3rd Year Computer Science 
-              <br>(User Design and Interaction)</h3>
-            </div>
-
-            <!--LINKS NEED FIXING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-            <div class="row align-items-center" id="linkWrap">
-              <div class="col-auto" id="v-line">
-              </div>
-              <div class="col" id="smallWordOverlay">
-                <a href="#aboutSec">About</a>
-                <br>
-                <a href="#portfolioSec">Portfolio</a>
-                <br>
-                <a href="#contactSec">Contact Me</a>
-              </div>
-            </div>
-          </div>
+    <div id="intro">
+      <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></image>
+    
+      <div id="boxOverlay">
+        <div id="wordOverlay">
+          <h1>Bethany Drummond</h1>
+        </div>
+        <div class="lightBoxOverlay">
+          <h3>3rd Year Computer Science 
+          <br>(User Design and Interaction)</h3>
         </div>
 
-        <div class="section" id="aboutSec">
-          <div class="lightBoxOverlay" id="title">
-            <h2>About Me</h2>
+        <!--LINKS NEED FIXING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <div class="row align-items-center" id="linkWrap">
+          <div class="col-auto" id="v-line">
           </div>
-          <div class="lightBoxOverlay" id="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
-            <button type="button">Link to CV</button>
+          <div class="col" id="smallWordOverlay">
+            <a href="#aboutSec">About</a>
+            <br>
+            <a href="#portfolio">Portfolio</a>
+            <br>
+            <a href="#contactSec">Contact Me</a>
           </div>
         </div>
+      </div>
 
-        <section class="section" id="verticalSec">
-          <div class="background"></div>
-          
-          <div id="verticalHolder">
-            <div id="vertical">
-              <div class="sectionV" id="portfolioSec">
-                <h1> P 1</h1>
-              </div>
-              <div class="sectionV" id="portfolioSec">
-                <h1> P 2</h1>
-              </div>
-              <div class="sectionV" id="portfolioSec">
-                <h1> P 3</h1>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </section>
-
-      <!-- <section id="horizontalEnd">
-        <div class="section">
-        </div>
-        <div class="section" id="contactSec">
-          <h1> section 4</h1>
-        </div>
-      </seciton> -->
+      <div class="lightBoxOverlay" id="title">
+        <h2>About Me</h2>
+      </div>
+      <div class="lightBoxOverlay" id="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
+        <button type="button">Link to CV</button>
+      </div>
     </div>
+
+    <section class="vertical" id="portfolio"> 
+      <ul class="cards">
+        <li class="card panel one">
+          <div class="flair flair--2"></div>
+        </li>
+        <li class="card panel two">
+          <div class="flair flair--3"></div>
+        </li>
+        <li class="card panel three">
+          <div class="flair flair--4"></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="horizontal">
+      <div class="pin-wrap">
+        <div class="animation-wrap to-right">
+
+          <div class="item">
+            <div class="item-inner" id="contactSec">
+              <div class="lightBoxOverlay" id="title">
+                <h2>Contact Me</h2>
+              </div>
+              <div class="lightBoxOverlay" id="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
+                <button type="button">Link to CV</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner" id="end">
+              <img src="./src/assets/stAbbs2.jpeg" alt="imageOfField">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
     <!-- GSAP plugin for scroll -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>

@@ -1,15 +1,17 @@
 /* General Styling */
-*{
+/* *{
   box-sizing: border-box;
-}
+} */
 
-body{
+html, body{
   margin: 0;
   padding: 0;
   font-family: 'Literata', serif;
-  font-weight: 300;
-  font-style: normal;
+  /* font-weight: 300;
+  font-style: normal; */
   background-color: #526747;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 h1{
@@ -25,62 +27,23 @@ h3{
   line-height: 1.5rem;
 }
 
-img{
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
+.cards{
+  padding: 0;
+  margin: 0;
+  display: grid;
+  width: 70svw;
+  > * {
+    grid-area: 1/1/2/2;
+  }
+  li{
+    list-style: none;
+  }
 }
 
-#scrollWrap{
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-/* Horizontal Scroll */
-#horizontal .section{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    flex-shrink: 0;
-    place-items: center;
-    position: relative;
-}
-
-#horizontal {
-    display: flex;
-    width: 300vw;
-    height: 100vh;
-}
-
-/*Vertical Scroll*/
-#verticalSec{
-  position: relative;
-  height: 100vh;
-} 
-
-#verticalHolder{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 10;
-}
-
-#vertical {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-#vertical .sectionV{
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card{
+  height: 70svh;
+  min-height: auto;
+  padding: 30px;
 }
 
 /* General Component Styling */
@@ -88,11 +51,11 @@ img{
   position: absolute;
   inset:0;
   background-color: #526747;
-  height: 100vh;
+  height: 100%;
   width: 20vw;
   display: flex;
   flex-direction: column;
-  padding-left: 5vw;
+  padding-left: 5vw
 }
 
 .lightBoxOverlay{
@@ -100,8 +63,6 @@ img{
   background-color: #FFF8F2;
   color: #9C826D;
   padding: 5%;
-  overflow: hidden;
-  display: inline-block;
   word-wrap: break-word;
   white-space: normal;
 }
@@ -109,7 +70,6 @@ img{
 #wordOverlay{
   inset: 0;
   color:#FFF8F2;
-  width: 30vw;
   margin-top: 10vh;
 }
 
@@ -138,12 +98,21 @@ img{
 
 /* Unique section component styling */
 /* Intro */
+#intro{
+  width: 100vw;
+  position: relative;
+}
+
 #intro .lightBoxOverlay{
   margin-bottom: 30vh;
   width: 40vw;
 }
 
 /* About */
+#aboutSec{
+  width: 50vw;
+}
+
 #aboutSec .lightBoxOverlay{
   margin-left: -5vw;
   justify-self: start;
@@ -167,8 +136,41 @@ img{
   background-color: #FFF8F2;
   color: #9C826D;
   padding: 5%;
-  margin: 10%;
   overflow: hidden;
   word-wrap: break-word;
   white-space: normal;
+  width: 100vw;
+}
+
+/*Contact Me*/
+#contactSec{
+  width: 100vw;
+}
+
+#contactSec .lightBoxOverlay{
+  margin-right: 5vw;
+  justify-self: start;
+}
+
+#contactSec #title{
+  width: 35vw;
+  height: auto;
+  padding: 2%;
+  margin-top: 10vh;
+}
+
+#contactSec #content{
+  height: 50vh;
+  width: 70vw;
+}
+
+
+/*End Image*/
+
+
+#endImage{
+  /* width: 70vw; */
+  height: auto;
+  flex-shrink:1;
+  place-items: start;
 }
