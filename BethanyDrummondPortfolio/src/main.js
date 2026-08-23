@@ -32,7 +32,7 @@ tl.to(contents, {
 
 tl.to("#horizontal",{
   opacity: 0,
-  duration: 0.3,
+  duration: 0,
 });
 
 //vertical portfolio
@@ -48,7 +48,7 @@ tl.to(contentsV, {
 
 tl.to("#vertical",{
   opacity: 0,
-  duration: 0.1
+  duration: 0
 });
 
 tl.to("#horizontalF",{
