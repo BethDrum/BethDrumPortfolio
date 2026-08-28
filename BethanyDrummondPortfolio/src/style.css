@@ -100,16 +100,6 @@ img{
 }
 
 /* General Component Styling */
-#boxOverlay{
-  position: absolute;
-  inset:0;
-  background-color: #526747;
-  height: 100vh;
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
-  padding-left: 5vw;
-}
 
 .lightBoxOverlay{
   inset:0;
@@ -125,6 +115,24 @@ img{
   z-index: 9999;
 }
 
+/* Unique section component styling */
+/* Intro */
+#intro .lightBoxOverlay{
+  margin-bottom: 30vh;
+  width: 40vw;
+}
+
+#boxOverlay{
+  position: absolute;
+  inset:0;
+  background-color: #526747;
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+}
+
 #wordOverlay{
   inset: 0;
   color:#FFF8F2;
@@ -132,14 +140,14 @@ img{
   margin-top: 10vh;
 }
 
-#smallWordOverlay a{
+#visableIntroQuickLinks a{
   color: #FFF2DE;
   text-decoration: none;
   font-size: 80%; 
   display: inline-block;
 }
 
-#smallWordOverlay a:hover, #smallWordOverlay a:visited, #smallWordOverlay a:active{
+#visableIntroQuickLinks a:hover, #smallWordOverlay a:visited, #smallWordOverlay a:active{
   color: #FFF2DE;
   text-decoration: none;
 }
@@ -149,13 +157,6 @@ img{
   height:100%;
   margin-left: -10%;
   width: 1px;
-}
-
-/* Unique section component styling */
-/* Intro */
-#intro .lightBoxOverlay{
-  margin-bottom: 30vh;
-  width: 40vw;
 }
 
 /* About */
@@ -279,13 +280,6 @@ button a:visited, .button a:active{
 
 /*Links section - hovers over relevent buttons*/
 .linksSec{
-  /* position: fixed;
-  inset: 0;
-  z-index: 99999999;
-  pointer-events: none;
-  grid-row: 1;
-  grid-column: 1; */
-
   position:fixed;
   top: 0;
   left: 0;
@@ -301,12 +295,44 @@ button a:visited, .button a:active{
   top: 0;
   left: 0;
 
-
-  
-  /* position: absolute;
-  pointer-events: auto; */
   /* MAKE PERMINANTLY INVISABLE */
-  /* opacity: 0;
+  opacity: 0;
   visibility: 0;
-  background: transparent; */
+  background: transparent;
+}
+
+.linksSec #linkedInLink{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: 0;
+  background: transparent;
+}
+
+.linksSec #githubLink{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: 0;
+  background: transparent;
+}
+
+.linksSec #introQuickLinks{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: 0;
+  background: transparent;
 }
