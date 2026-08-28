@@ -16,12 +16,17 @@ const tl = gsap.timeline({
       contents.length +
       contentsV.length +
       contentsF.length
-    )
+    ),
+    pinType: document.querySelector("#scrollWrap").style.transform ? "transform" : "fixed",
+    ignoreMobileResize: true
   }
 });
 
 // Horizontal fade-in
-tl.to("#horizontal", { opacity: 1, duration: 0 });
+tl.to("#horizontal", { 
+  opacity: 1, 
+  duration: 0,
+});
 
 // Horizontal scroll
 tl.to(contents, {
@@ -30,7 +35,10 @@ tl.to(contents, {
 });
 
 // Fade horizontal out slightly (not fully)
-tl.to("#horizontal", { opacity: 0.3, duration: 0.4 });
+tl.to("#horizontal", { 
+  opacity: 0.3, 
+  duration: 0.4 
+});
 
 // Vertical fade-in + float effect
 tl.to("#vertical", {
@@ -66,3 +74,23 @@ tl.to(contentsF, {
   xPercent: -100 * (contentsF.length - 1),
   ease: "none"
 });
+
+
+
+const target = document.getElementById("visableCVButton");
+const clickB = document.getElementById("cvButton");
+
+function trackButton() {
+  const rect = target.getBoundingClientRect();
+  
+  gsap.set(clickB, {
+    x: rect.left,
+    y: rect.top,
+    width: rect.width,
+    height: rect.height
+  });
+}
+window.addEventListener("scroll", trackButton);
+window.addEventListener("resize", trackButton);
+
+gsap.tl.add(trackButton)
