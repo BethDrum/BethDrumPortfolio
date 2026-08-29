@@ -30,6 +30,13 @@ img{
   object-fit: cover;
 }
 
+a{
+  text-decoration: none; 
+  display: inline-block;
+  color: #9C826D;
+  text-decoration: underline
+}
+
 #scrollWrap{
   position: relative;
   width: 100vw;
@@ -199,7 +206,6 @@ img{
   text-decoration: none;
 }
 
-/* MAKE THIS WORK ----------------------------------------- */
 .button a:hover{
   color: #afb3ad;
 }
@@ -207,6 +213,7 @@ img{
 button a:visited, .button a:active{
   color: #526747;
   text-decoration: none;
+  opacity: 1;
 }
 
 /*Skills*/
@@ -297,9 +304,15 @@ button a:visited, .button a:active{
 
   /* MAKE PERMINANTLY INVISABLE */
   opacity: 0;
-  visibility: 0;
+  visibility: visible;
   background: transparent;
 }
+
+.linksSec #cvButton a:hover, .linksSec #cvButton a:visited, .linksSec #cvButton a:active{
+  background-color: #526747;
+  opacity: 1;
+}
+
 
 .linksSec #linkedInLink{
   position: absolute;
