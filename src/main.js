@@ -15,6 +15,7 @@ const tl = gsap.timeline({
     trigger: "#scrollWrap",
     pin: true,
     scrub: 1,
+    invalidateOnRefresh: true,
     start: "top top",
     end: "+=" + window.innerWidth * (
       contents.length +
@@ -22,7 +23,7 @@ const tl = gsap.timeline({
       contentsF.length
     ),
     pinType: document.querySelector("#scrollWrap").style.transform ? "transform" : "fixed",
-    ignoreMobileResize: true
+    ignoreMobileResize: true,
   }
 });
 
