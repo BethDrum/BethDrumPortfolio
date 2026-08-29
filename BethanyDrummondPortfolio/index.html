@@ -16,7 +16,7 @@
       <section id="horizontal">
         <!-- all sections auto set to horizontal scroll -->
         <div class="section" id="intro">
-          <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></image>
+          <img src="./src/assets/stAbbs1.jpeg" alt="imageOfField"></img>
           
           <div id="boxOverlay">
             <div id="wordOverlay">
@@ -27,11 +27,10 @@
               <br>(User Design and Interaction)</h3>
             </div>
 
-            <!--LINKS NEED FIXING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
             <div class="row align-items-center" id="linkWrap">
               <div class="col-auto" id="v-line">
               </div>
-              <div class="col" id="smallWordOverlay">
+              <div class="col" id="visableIntroQuickLinks">
                 <a href="#aboutSec">About</a>
                 <br>
                 <a href="#portfolio">Portfolio</a>
@@ -47,8 +46,25 @@
             <h2>About Me</h2>
           </div>
           <div class="lightBoxOverlay" id="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
-            <a href="https://www.google.com" class="button"> View my CV!</a>
+            <p>Hi! I'm Bethany,
+            <br>I thrive in environments where I can collaborate with other team members to provide a final project and am always looking to expand my knowledge.
+            <br>Currently, I am looking for internships for this coming summer and am open to any opportunity where I can contribute my skills and grow my knowledge.</p>
+            <a id="visableCVButton" href="https://drive.google.com/file/d/10qafN7DoTLhMTJ8OLCHSCYyN4SkhL9nO/view?usp=sharing" class="button"> View my CV!</a>
+          </div>
+        </div>
+
+        <div class="section" id="skillsSec">
+          <div class="lightBoxOverlay" id="content">
+            <h5 class="bold">Technical Skills</h5>
+            <p>Programming Languages: Java, Python, HTML, Bash, CSS, JavaScript, C, C#, PHP</p>
+            <p>Frameworks and Tools: Bootstrap, AWS, AI, Cisco, GSAP, Three.js, Vite</p>
+            <p>Concepts and Methodologies: Object-orientated programming, Procedural Programming</p>
+
+            <h5 class="bold">Soft Skills</h5>
+             <p>Teamworking, Presentation, Organisation, Communication,	Crisis Management, Adaptability, Customer Engagement, Problem Solving Under Pressure, Time Management</p>
+          </div>
+          <div class="lightBoxOverlay" id="title">
+            <h2>Skills</h2>
           </div>
         </div>
 
@@ -61,43 +77,63 @@
         <div class="sectionV"></div>
         <div class="sectionV">
           <div class="lightBoxOverlay" id="portfolioSec">
-            <h1> P 1</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit, saepe harum itaque, iste asperiores a neque illo, eius tempora possimus eaque accusantium ex architecto at veniam repudiandae ullam minima?</p>
+            <h2>Remixd</h2>
+            <p>A music rating and sharing site. Users are able to create a account, find any album and view reviews from other users. </p>
+            <p>Group project with 4 team members</p>
             <div class="row" id="innerPortfolio">
               <div class="col">
                 <h4>Stack</h4>
                 <ul>
                   <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
                 </ul>
               </div>
               <div class="col">
-                <a href="www.google.com" class="button">Link to project</a>
+                <a href="https://github.com/keithlobo07/remixd" class="button">Link to project</a>
               </div>
             </div>
           </div>
         </div>
-
-        
         <div class="sectionV">
           <div class="lightBoxOverlay" id="portfolioSec">
-            <h1> P 2</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit, saepe harum itaque, iste asperiores a neque illo, eius tempora possimus eaque accusantium ex architecto at veniam repudiandae ullam minima?</p>
-            <h4>Stack</h4>
-            <ul>
-              <li>HTML</li>
-            </ul>
-            <a href="">Link to project</a>
+            <h2>Scribble</h2>
+            <div class="row">
+              <p>A digitalised version of the popular boardgame Scrabble. When creating this project I focused on adding additional functionality to improve the overall user experience. An example of this is the sound effects added for when the leaderboard is displayed.</p>
+              <p>Solo Project</p>
+            </div>
+            <div class="row" id="innerPortfolio">
+              <div class="col">
+                <h4>Stack</h4>
+                <ul>
+                  <li>Java</li>
+                </ul>
+              </div>
+              <div class="col">
+                <a href="https://github.com/BethDrum/ScribbleGame" class="button">Link to project</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="sectionV">
           <div class="lightBoxOverlay" id="portfolioSec">
-            <h1> P 3</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque fugit, saepe harum itaque, iste asperiores a neque illo, eius tempora possimus eaque accusantium ex architecto at veniam repudiandae ullam minima?</p>
-            <h4>Stack</h4>
-            <ul>
-              <li>HTML</li>
-            </ul>
-            <a href="">Link to project</a>
+            <h2>Portfolio Site</h2>
+            <p>Designed and created a portfolio website using GSAP to create an interesting scrolling experience. Used vite to improve my development experience. </p>
+            <p>Solo Project</p>
+            <div class="row" id="innerPortfolio">
+              <div class="col">
+                <h4>Stack</h4>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript (GSAP)</li>
+                </ul>
+              </div>
+              <div class="col">
+                <a href="https://github.com/BethDrum/BethDrumPortfolio" class="button">Link to project</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -112,7 +148,17 @@
             <h2>Contact Me</h2>
           </div>
           <div class="lightBoxOverlay" id="content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur a accusamus non error sunt, ab sed libero ad corporis dolore veniam nulla aliquam perferendis itaque consectetur nihil cum eveniet!</p>
+            <ul>
+              <li>Email: </li>
+              <li>Bethany.K.Drummond@gmail.com</li>
+              <li>Phone Number:</li>
+              <li>07919 443338</li>
+              <br>
+              <li>LinkedIn: </li>
+              <li><a id="visableLinkedInLink" href="https://www.linkedin.com/in/bethanydrummond/">Bethany Drummond</a></li>
+              <li>Github: </li>
+              <li><a id="visableGithubLink" href="https://github.com/bethdrum">BethDrum</a></li>
+            </ul>
           </div>
         </div>
 
@@ -122,11 +168,31 @@
 
       </section>
     </div>
+
+
+    <section class="linksSec">
+      <a id="cvButton" href="https://drive.google.com/file/d/10qafN7DoTLhMTJ8OLCHSCYyN4SkhL9nO/view?usp=sharing" class="button"> View my CV!</a>
+      <a id="linkedInLink" href="https://www.linkedin.com/in/bethanydrummond/">Bethany Drummond</a>
+      <a id="githubLink" href="https://github.com/bethdrum">BethDrum</a>
+
+      <div id="introQuickLinks">
+        <a href="#aboutSec" id="linkOne">About</a>
+        <br>
+        <a href="#portfolio" id="linkTwo">Portfolio</a>
+        <br>
+        <a href="#contactSec" id="linkThree">Contact Me</a>
+      </div>
+
+    </section>
     <!-- GSAP plugin for scroll -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <!-- GSAP plugin for scroll to -->
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
+
     <!--Bootstap plugin-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/link.js"></script>
 </body>
 </html>

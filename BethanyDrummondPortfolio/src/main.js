@@ -1,6 +1,6 @@
 import './style.css'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const contents = gsap.utils.toArray('#horizontal .section');
 const contentsV = gsap.utils.toArray('#vertical .sectionV');
@@ -16,12 +16,19 @@ const tl = gsap.timeline({
       contents.length +
       contentsV.length +
       contentsF.length
-    )
+    ),
+    pinType: document.querySelector("#scrollWrap").style.transform ? "transform" : "fixed",
+    ignoreMobileResize: true
   }
 });
 
-// Horizontal fade-in
-tl.to("#horizontal", { opacity: 1, duration: 0 });
+// Horizontal section
+tl.to("#horizontal", { 
+  opacity: 1, 
+  duration: 0,
+});
+tl.addLabel("aboutMe");
+
 
 // Horizontal scroll
 tl.to(contents, {
@@ -30,7 +37,10 @@ tl.to(contents, {
 });
 
 // Fade horizontal out slightly (not fully)
-tl.to("#horizontal", { opacity: 0.3, duration: 0.4 });
+tl.to("#horizontal", { 
+  opacity: 0.3, 
+  duration: 0.4 
+});
 
 // Vertical fade-in + float effect
 tl.to("#vertical", {
@@ -39,6 +49,7 @@ tl.to("#vertical", {
   duration: 0.8,
   ease: "power2.out"
 }, "<");
+tl.addLabel("portfolio")
 
 // Vertical scroll
 tl.to(contentsV, {
@@ -54,6 +65,8 @@ tl.to("#vertical", {
   ease: "power2.in"
 });
 
+tl.addLabel("contact");
+
 // Fade next horizontal section in
 tl.to("#horizontalF", {
   opacity: 1,
@@ -65,4 +78,43 @@ tl.to("#horizontalF", {
 tl.to(contentsF, {
   xPercent: -100 * (contentsF.length - 1),
   ease: "none"
+});
+
+
+
+//link listeners for section links
+document.querySelector("#linkOne").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const targetOne = tl.scrollTrigger.labelToScroll("aboutMe");
+
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: targetOne,
+    ease: "power2.out"
+  });
+});
+
+document.querySelector("#linkTwo").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const targetTwo = tl.scrollTrigger.labelToScroll("portfolio");
+
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: targetTwo,
+    ease: "power2.out"
+  });
+});
+
+document.querySelector("#linkThree").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const targetThree = tl.scrollTrigger.labelToScroll("contact");
+
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: targetThree,
+    ease: "power2.out"
+  });
 });

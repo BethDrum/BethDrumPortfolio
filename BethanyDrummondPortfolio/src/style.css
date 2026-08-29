@@ -7,7 +7,6 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Literata', serif;
-  font-weight: 300;
   font-style: normal;
   background-color: #526747;
 }
@@ -31,6 +30,13 @@ img{
   object-fit: cover;
 }
 
+a{
+  text-decoration: none; 
+  display: inline-block;
+  color: #9C826D;
+  text-decoration: underline
+}
+
 #scrollWrap{
   position: relative;
   width: 100vw;
@@ -52,6 +58,8 @@ img{
     width: 100vw;
     height: 100vh;
     opacity: 0;
+    z-index: 1;
+    position: relative;
 }
 
 /* Final Horizontal Scroll */
@@ -71,8 +79,9 @@ img{
     top: 0;
     left: 0;
     opacity: 0;
-    z-index: 10;
+    z-index: 11;
     background-color: #526747;
+    pointer-events: none;
 }
 
 /*Vertical Scroll*/
@@ -93,21 +102,11 @@ img{
   display: flex;
   flex-direction: column;
   opacity: 0;
-  z-index: 20;
+  z-index: 10;
   background-color: transparent;
 }
 
 /* General Component Styling */
-#boxOverlay{
-  position: absolute;
-  inset:0;
-  background-color: #526747;
-  height: 100vh;
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
-  padding-left: 5vw;
-}
 
 .lightBoxOverlay{
   inset:0;
@@ -120,6 +119,25 @@ img{
   white-space: normal;
   /*------------------------------------------------------------------------------------shadow*/
   box-shadow: 5px 5px 2px #c6aa92a1;
+  z-index: 9999;
+}
+
+/* Unique section component styling */
+/* Intro */
+#intro .lightBoxOverlay{
+  margin-bottom: 30vh;
+  width: 40vw;
+}
+
+#boxOverlay{
+  position: absolute;
+  inset:0;
+  background-color: #526747;
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
 }
 
 #wordOverlay{
@@ -129,14 +147,14 @@ img{
   margin-top: 10vh;
 }
 
-#smallWordOverlay a{
+#visableIntroQuickLinks a{
   color: #FFF2DE;
   text-decoration: none;
   font-size: 80%; 
   display: inline-block;
 }
 
-#smallWordOverlay a:hover, a:visited, a:active{
+#visableIntroQuickLinks a:hover, #smallWordOverlay a:visited, #smallWordOverlay a:active{
   color: #FFF2DE;
   text-decoration: none;
 }
@@ -148,30 +166,11 @@ img{
   width: 1px;
 }
 
-#linkWrap{
-  width:20vw;
-}
-
-/* Unique section component styling */
-/* Intro */
-#intro .lightBoxOverlay{
-  margin-bottom: 30vh;
-  width: 40vw;
-}
-
-.button{
-  background-color: #8FA485;
-  color: #FFF2DE;
-  padding: 3% 5% 3% 5%;
-  text-decoration: none;
-}
-
-.button a:hover, a:visited, a:active{
-  color: #526747;
-  text-decoration: none;
-}
-
 /* About */
+#aboutSec{
+  pointer-events: auto;
+}
+
 #aboutSec .lightBoxOverlay{
   margin-left: -5vw;
   justify-self: start;
@@ -185,28 +184,64 @@ img{
 }
 
 #aboutSec #content{
-  height: 50vh;
-  width: 70vw;
-  margin-bottom: 10%;
+  height: 60vh;
+  width: 80vw;
+  padding: 4%;
 }
 
 #aboutSec #content p{
-  margin-bottom: 13%;
+  margin-bottom: 10%;
+}
+
+#aboutSec a{
+  z-index: 999;
+  position: relative;
+  pointer-events: auto;
+}
+
+.button{
+  background-color: #8FA485;
+  color: #FFF2DE;
+  padding: 3% 5% 3% 5%;
+  text-decoration: none;
+}
+
+.button a:hover{
+  color: #afb3ad;
+}
+
+button a:visited, .button a:active{
+  color: #526747;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/*Skills*/
+#skillsSec{
+  padding-right: 10%;
+  margin-top: 3%;
+}
+
+#skillsSec h5{
+  font-weight: 500;
+}
+
+#skillsSec #title{
+  margin-left: 60%;
+  width: 40%;
+  margin-bottom: 5%
 }
 
 /*Portfolio*/ 
 #portfolioSec{
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
 }
 
-#portfolioSec h1{
+#portfolioSec h2{
   text-align: center;
   padding-bottom: 2%;
-}
-
-#innerPortfolio{
-  padding: 5%;
+  font-size: 160%;
 }
 
 /*Contact Me*/
@@ -217,8 +252,12 @@ img{
 
 #contactSec{
   z-index: 15;
-  width: 100vw;
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 5vh 0;
 }
 
 #contactSec #title{
@@ -230,11 +269,83 @@ img{
 }
 
 #contactSec #content{
-  height: 50vw;
-  width: 70vw;
+  height: auto;
+  width: 50vw;
   margin-left: 30vw;
+
+  height: 50vh;
+  width: 70vw;
+  margin-bottom: 10%;
+  padding-top: 3%;
 }
 
-#contactSec #content p{
+#contactSec #content ul{
   margin-bottom: 13%;
+  list-style: none;
+  line-height: 150%;
+}
+
+/*Links section - hovers over relevent buttons*/
+.linksSec{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+.linksSec #cvButton{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: visible;
+  background: transparent;
+}
+
+.linksSec #cvButton a:hover, .linksSec #cvButton a:visited, .linksSec #cvButton a:active{
+  background-color: #526747;
+  opacity: 1;
+}
+
+
+.linksSec #linkedInLink{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: 0;
+  background: transparent;
+}
+
+.linksSec #githubLink{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: 0;
+  background: transparent;
+}
+
+.linksSec #introQuickLinks{
+  position: absolute;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+
+  /* MAKE PERMINANTLY INVISABLE */
+  opacity: 0;
+  visibility: 0;
+  background: transparent;
 }
