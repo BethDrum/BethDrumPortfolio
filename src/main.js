@@ -21,7 +21,7 @@ const tl = gsap.timeline({
       contents.length +
       contentsV.length +
       contentsF.length
-    ),
+    )+0.3,
     pinType: document.querySelector("#scrollWrap").style.transform ? "transform" : "fixed",
     ignoreMobileResize: true,
   }
