@@ -1,5 +1,6 @@
 import './style.css'
 
+import {gsap} from "gsap"
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const contents = gsap.utils.toArray('#horizontal .section');

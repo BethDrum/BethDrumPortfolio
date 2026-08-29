@@ -1,3 +1,4 @@
+import {gsap} from "gsap"
 gsap.registerPlugin(ScrollTrigger);
 
 //CV button first
