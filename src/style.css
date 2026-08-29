@@ -61,6 +61,7 @@ a{
     opacity: 0;
     z-index: 1;
     position: relative;
+    min-height: 100vh;
 }
 
 /* Final Horizontal Scroll */
@@ -83,6 +84,7 @@ a{
     z-index: 11;
     background-color: #526747;
     pointer-events: none;
+    min-height: 100vh;
 }
 
 /*Vertical Scroll*/
